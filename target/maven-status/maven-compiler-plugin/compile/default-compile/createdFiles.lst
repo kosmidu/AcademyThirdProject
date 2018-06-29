@@ -1,0 +1,8 @@
+Customer.class
+RequiredCheckboxValidator.class
+RandomDateOfBirth.class
+ProductDetailView.class
+CustomerImpl.class
+LanguageSwitcher.class
+CacheControlPhaseListener.class
+PaginatorView.class

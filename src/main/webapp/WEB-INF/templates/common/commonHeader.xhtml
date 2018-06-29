@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="#{locale.language}"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view locale="#{locale.locale}">
+<h:body>
+    <ui:composition>
+
+        <h2>
+            <h:outputText value="Header" />
+        </h2>
+
+        <h:form>
+            <p:growl id="growl" life="2000" />
+            <h:outputText value = "#{msg['local.jsf']}" />
+            <div id="flag-icons">
+                <h:commandButton actionListener="#{locale.changeLanguage('')}"
+                                 value="English" image="resources/img/icon/uk.png" update="growl"/>
+                <h:outputText value=" " />
+                <h:commandButton action="#{locale.changeLanguage('es')}"
+                                 value="Spanish" image="resources/img/icon/es.png" />
+            </div>
+        </h:form>
+
+    </ui:composition>
+</h:body>
+</f:view>
+</html>

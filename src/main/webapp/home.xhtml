@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xml:lang="en" lang="en">
+<h:head>
+    <h:outputStylesheet name="common-style.css" library="css" />
+    <title>Customers</title>
+</h:head>
+<h:body>
+
+    <ui:composition template="/WEB-INF/templates/common/commonLayout.xhtml">
+        <ui:define name="content">
+        <!-- CREATE CUSTOMER -->
+            <h:form id="create_form" >
+                <p:commandButton value="Add customer" action="service.xhtml?faces-redirect=true"
+                                 icon="ui-icon-plusthick" styleClass="ui-priority-primary" ajax="false">
+                    <f:setPropertyActionListener target="#{firstView.service.user.id}" value= "#{firstView.findMax() + 1}"  />
+                </p:commandButton>
+                <br/>
+                <br/>
+            </h:form>
+        <!-- VIEW CUSTOMERS -->
+            <h:form id="view_form">
+                <p:dataTable id="table" value="#{firstView.customers}" var="customer"
+                             rows="10"
+                             rowIndexVar="row"
+                             paginator="true"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                             rowsPerPageTemplate="5,10,15">
+                <!-- SR.No -->
+                    <p:column headerText="Sr.No" >
+                        <div id ="container_sno">
+                            <h:outputText value="#{row + 1}" />
+                        </div>
+                    </p:column>
+                <!-- USERNAME -->
+                    <p:column headerText="Username" >
+                        <h:outputText value="#{customer.username}" />
+                    </p:column>
+                <!-- FIRST NAME -->
+                    <p:column headerText="FirstName" >
+                        <h:outputText value="#{customer.firstName}" />
+                    </p:column>
+                <!-- LAST NAME -->
+                    <p:column headerText="LastName" >
+                        <h:outputText value="#{customer.lastName}" />
+                    </p:column>
+                <!-- MODIFY -->
+                    <p:column>
+                        <div id="container_modify" >
+                            <p:commandButton styleClass="centeredColumn" value="Modify" icon="ui-icon-pencil"
+                                             action="service.xhtml?faces-redirect=true" ajax="false">
+                                <f:setPropertyActionListener target="#{firstView.service.user.id}" value="#{customer.id}" />
+                            </p:commandButton>
+                        </div>
+                    </p:column>
+                <!-- DELETE -->
+                    <p:column>
+                            <div id="container_delete">
+                                <p:commandButton styleClass="centeredColumn" value="Delete" icon="ui-icon-trash"
+                                                 action="#{firstView.service.deleteCustomer(customer)}"
+                                                 update="view_form:table">
+                                    <p:ajax update="view_form:table" />
+                                    <p:confirm header="Confirmation" message="Are you sure?" icon="ui-icon-alert" />
+                                </p:commandButton>
+                            </div>
+                            <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                                <p:commandButton value="Yes"  styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+                                <p:commandButton value="No"  styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+                            </p:confirmDialog>
+                    </p:column>
+                </p:dataTable>
+                <br/><br/>
+                <p:commandButton value="Home" icon="ui-icon-home" ajax="true">
+                    <f:ajax update=":view_form" render=":view_form"/>
+                </p:commandButton>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+</html>
