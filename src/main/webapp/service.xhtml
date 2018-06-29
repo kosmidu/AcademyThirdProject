@@ -33,16 +33,28 @@
                             <p:messages />
                             <h:panelGrid columns="2" columnClasses="label, value">
                                 <h:outputText value="Firstname: *" />
-                                <p:inputText value="#{secondView.user.firstName}" required="true" label="Firstname"
-                                             placeholder="Enter your name" />
+                                <p:inputText id="fName" value="#{secondView.user.firstName}" required="true" label="Firstname"
+                                             placeholder="Enter your name">
+                                    <f:validateLength minimum="2" maximum="20" />
+                                    <f:validateRegex pattern="^[A-Za-z]+$" />
+
+                                </p:inputText>
 
                                 <h:outputText value="Lastname: *" />
-                                <p:inputText value="#{secondView.user.lastName}" required="true" label="Lastname"
-                                             placeholder="Enter your surname" />
+                                <p:inputText id="lName" value="#{secondView.user.lastName}" required="true" label="Lastname"
+                                             placeholder="Enter your surname" >
+                                    <f:validateLength minimum="2" maximum="20" />
+                                    <f:validateRegex pattern="^[A-Za-z]+$" />
+                                </p:inputText>
 
                                 <h:outputText value="Username: *" />
-                                <p:inputText value="#{secondView.user.username}" required="true" label="Username"
-                                             placeholder="Enter your username" />
+                                <p:inputText id="username" value="#{secondView.user.username}" required="true" label="Username"
+                                             placeholder="Enter your username" requiredMessage="This username is exists already">
+                                    <f:validateLength minimum="2" maximum="20" />
+                                    <f:validateRegex pattern="^[A-Za-z]+$" />
+                                    <f:validator validatorId="UniqueUsernameValidator" />
+                                    <f:attribute name="employee" value="#{firstView.getCustomers()}" />
+                                </p:inputText>
 
                                 <h:outputText value="Age: " />
                                 <p:calendar value="#{secondView.user.birthDate}" placeholder="dd-MM-yyyy"
@@ -65,10 +77,16 @@
                                 <p:inputText value="#{secondView.user.city}" placeholder="Enter the city name"/>
 
                                 <h:outputText value="Street: " />
-                                <p:inputText value="#{secondView.user.street}" placeholder="Enter the street name"/>
+                                <p:inputText value="#{secondView.user.street}" placeholder="Enter the street name" >
+                                    <f:validateLength minimum="2" maximum="20" />
+                                    <f:validateRegex pattern="^[A-Za-z]+$" />
+                                </p:inputText>
 
                                 <h:outputText value="Postal Code: " />
-                                <p:inputText value="#{secondView.user.zipCode}" placeholder="Enter the zip code" />
+                                <p:inputText value="#{secondView.user.zipCode}" placeholder="Enter the zip code" >
+                                    <f:validateLength minimum="2" maximum="20" />
+                                    <f:validateRegex pattern="^[0-9]+$" />
+                                </p:inputText>
 
                                 <h:outputText value="Skip to last: " />
                                 <p:selectBooleanCheckbox value="#{secondView.skip}" />

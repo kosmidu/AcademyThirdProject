@@ -1,5 +1,7 @@
+UniqueUsernameValidator.class
 Customer.class
 RequiredCheckboxValidator.class
+CustomerException.class
 RandomDateOfBirth.class
 ProductDetailView.class
 CustomerImpl.class

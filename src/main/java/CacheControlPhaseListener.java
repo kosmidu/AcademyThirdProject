@@ -11,9 +11,7 @@ public class CacheControlPhaseListener implements PhaseListener
         return PhaseId.RENDER_RESPONSE;
     }
 
-    public void afterPhase(PhaseEvent event)
-    {
-    }
+    public void afterPhase(PhaseEvent event) {}
 
     public void beforePhase(PhaseEvent event)
     {

@@ -58,24 +58,32 @@ public class ProductDetailView implements Serializable {
 
     // Actions ------------------------------------------------------------------------------------
 
-    public void submit() {
+    public void submit() throws CustomerException {
         //FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("You agreed with me!"));
         //PrimeFaces.current().dialog().showMessageDynamic(new FacesMessage(FacesMessage.SEVERITY_INFO, "You agreed with me!", null));
         save(userID);
     }
 
-    private void save(Long id) {
+    private void save(Long id) throws CustomerException {
         //click();
         for(Customer c : service.getCustomers()) {
             if(id.equals(c.getId())) {
-
+                if(!service.validateCustomer(c)) {
+                    FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Unsuccessful update!", "Invalid data.");
+                    PrimeFaces.current().dialog().showMessageDynamic(msg);
+                    break;
+                }
                 service.updateCustomer(user);
                 FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Successful update!", "Hello, " + user.getFirstName());
                 PrimeFaces.current().dialog().showMessageDynamic(msg);
                 return;
             }
         }
-
+        if(!service.validateCustomer(user)) {
+            FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Unsuccessful insert!", "Invalid data.");
+            PrimeFaces.current().dialog().showMessageDynamic(msg);
+            return;
+        }
         user.setId(userID);
         service.addCustomer(user);
         service.setUser(user);
