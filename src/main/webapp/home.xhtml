@@ -16,61 +16,59 @@
 
     <ui:composition template="/WEB-INF/templates/common/commonLayout.xhtml">
         <ui:define name="content">
+            <p:toolbar>
+                <p:toolbarGroup>
+                    <h2>
+                        <p:outputLabel value="Customer's Information" />
+                    </h2>
         <!-- CREATE CUSTOMER -->
             <h:form id="create_form" >
                 <p:commandButton value="Add customer" action="service.xhtml?faces-redirect=true"
                                  icon="ui-icon-plusthick" styleClass="ui-priority-primary" ajax="false">
-                    <f:setPropertyActionListener target="#{firstView.service.user.id}" value= "#{firstView.findMax() + 1}"  />
+                    <f:setPropertyActionListener target="#{customerView.service.user.id}" value= "#{customerView.findMax() + 1}"  />
                 </p:commandButton>
                 <br/>
                 <br/>
             </h:form>
         <!-- VIEW CUSTOMERS -->
             <h:form id="view_form">
-                <p:dataTable id="table" value="#{firstView.customers}" var="customer"
-                             rows="10"
+                <p:dataTable id="table" value="#{customerView.customers}" var="customer"
+                             rows="5"
                              rowIndexVar="row"
                              paginator="true"
                              paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                              rowsPerPageTemplate="5,10,15">
-                <!-- SR.No -->
-                    <p:column headerText="Sr.No" >
-                        <div id ="container_sno">
-                            <h:outputText value="#{row + 1}" />
-                        </div>
-                    </p:column>
+
                 <!-- USERNAME -->
-                    <p:column headerText="Username" >
+                    <p:column headerText="Username" filterBy="#{customer.username}" sortBy="#{customer.username}" filterMatchMode="contains">
                         <h:outputText value="#{customer.username}" />
                     </p:column>
                 <!-- FIRST NAME -->
-                    <p:column headerText="FirstName" >
+                    <p:column headerText="FirstName" filterBy="#{customer.firstName}" sortBy="#{customer.firstName}" filterMatchMode="contains">
                         <h:outputText value="#{customer.firstName}" />
                     </p:column>
                 <!-- LAST NAME -->
-                    <p:column headerText="LastName" >
+                    <p:column headerText="LastName" filterBy="#{customer.lastName}" sortBy="#{customer.lastName}" filterMatchMode="contains">
                         <h:outputText value="#{customer.lastName}" />
                     </p:column>
                 <!-- MODIFY -->
                     <p:column>
                         <div id="container_modify" >
                             <p:commandButton styleClass="centeredColumn" value="Modify" icon="ui-icon-pencil"
-                                             action="service.xhtml?faces-redirect=true" ajax="false">
-                                <f:setPropertyActionListener target="#{firstView.service.user.id}" value="#{customer.id}" />
+                                             action="service?faces-redirect=true" ajax="false">
+                                <f:setPropertyActionListener target="#{customerView.service.user.id}" value="#{customer.id}"/>
                             </p:commandButton>
                         </div>
                     </p:column>
                 <!-- DELETE -->
                     <p:column>
                             <div id="container_delete">
-                                <p:commandButton styleClass="centeredColumn" value="Delete" icon="ui-icon-trash"
-                                                 action="#{firstView.service.deleteCustomer(customer)}"
-                                                 update="view_form:table">
-                                    <p:ajax update="view_form:table" />
+                                <p:commandButton styleClass="centeredColumn" value="Delete" icon="ui-icon-trash">
+                                    <p:ajax update="view_form:table" listener="#{customerView.service.deleteCustomer(customer)}" />
                                     <p:confirm header="Confirmation" message="Are you sure?" icon="ui-icon-alert" />
                                 </p:commandButton>
                             </div>
-                            <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                            <p:confirmDialog global="true" showEffect="fade" hideEffect="fade" resizable="true">
                                 <p:commandButton value="Yes"  styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
                                 <p:commandButton value="No"  styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
                             </p:confirmDialog>
@@ -81,6 +79,11 @@
                     <f:ajax update=":view_form" render=":view_form"/>
                 </p:commandButton>
             </h:form>
+                    </p:toolbarGroup>
+                </p:toolbar>
+        <!--</p:panel>-->
+
+
         </ui:define>
     </ui:composition>
 

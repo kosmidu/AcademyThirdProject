@@ -7,4 +7,4 @@ ProductDetailView.class
 CustomerImpl.class
 LanguageSwitcher.class
 CacheControlPhaseListener.class
-PaginatorView.class
+CustomerView.class

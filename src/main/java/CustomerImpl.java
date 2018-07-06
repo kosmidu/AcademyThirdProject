@@ -1,14 +1,17 @@
 import org.primefaces.PrimeFaces;
 
+import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,15 +24,19 @@ public class CustomerImpl implements Serializable {
     private static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                     + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
-    private static final String TEXT_PATTERN= "^[A-Za-z]+$";
+    private static final String TEXT_PATTERN = "^[A-Za-z]+$";
 
-    private static final String NUMBER_PATTERN= "^[0-9]+$";
+    private static final String USERNAME_PATTERN = "^[A-Za-z][A-Za-z0-9]+$";
+
+    private static final String NUMBER_PATTERN = "^[0-9]+$";
 
     private static List<Customer> customerList = new ArrayList<>();
 
     private Customer user = new Customer();
 
-    static {
+    @PostConstruct
+    public void init() {
+
         Date date = null;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         try {
@@ -42,13 +49,13 @@ public class CustomerImpl implements Serializable {
                 date, "Greece", "Volos", "Zachou",
                 "38333", "6977777777", "makosmid@example.com", true));
         customerList.add(new Customer(2L, "John", "Galanis", "userII",
-                date, "United Kingdom", "London", "Craven",
+                date, "Germany", "Munich", "Craven",
                 "21873", "6924354897", "userII@example.com", true));
         customerList.add(new Customer(3L, "John", "Kalomiris", "userIII",
-                date, "United Kingdom", "Southampton", "Irving",
+                date, "USA", "New York", "Irving",
                 "237100", "6945367877", "userIII@example.com", true));
         customerList.add(new Customer(4L, "Nelson", "Sandoval", "userIV",
-                date, "Mexico", "Mexico", "Leon",
+                date, "Brazil", "Sao Paolo", "Leon",
                 "191917", "6977345677", "userIV@example.com", true));
         customerList.add(new Customer(5L, "Fotis", "Chronopoulos", "userV",
                 date, "Greece", "Athens", "Zachou",
@@ -59,9 +66,7 @@ public class CustomerImpl implements Serializable {
         return user;
     }
 
-    public void setUser(Customer user) {
-        this.user = user;
-    }
+    public void setUser(Customer user) { this.user = user; }
 
     void addCustomer(Customer empl) {
         Customer employee = new Customer(empl.getId(), empl.getFirstName(),empl.getLastName(),empl.getUsername(),
@@ -91,11 +96,11 @@ public class CustomerImpl implements Serializable {
     }
 
     public String deleteCustomer(Customer customer) {
+        customerList.remove(customer);
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO,
                 "Succeeded!",
                 "The user '" + customer.getUsername() + "' is removed");
         PrimeFaces.current().dialog().showMessageDynamic(message);
-        customerList.remove(customer);
 
         return null;
     }
@@ -110,14 +115,11 @@ public class CustomerImpl implements Serializable {
 
         pattern = Pattern.compile(EMAIL_PATTERN);
         try {
-            if (customer.getEmail() != null) {
                 matcher = pattern.matcher(customer.getEmail());
                 return matcher.matches();
-            }
         } catch(NullPointerException e) {
-            throw new CustomerException("NullPointerException !");
+            throw new CustomerException("Null Pointer Exception !");
         }
-        return true;
     }
 
     private boolean validateText(Customer customer) throws CustomerException {
@@ -128,16 +130,13 @@ public class CustomerImpl implements Serializable {
 
         pattern = Pattern.compile(TEXT_PATTERN);
         try {
-            if(customer.getFirstName() != null & customer.getLastName() != null & customer.getStreet() != null ) {
                 matcherFname = pattern.matcher(customer.getFirstName());
                 matcherLname = pattern.matcher(customer.getLastName());
                 matcherStreet = pattern.matcher(customer.getStreet());
                 return (matcherFname.matches() & matcherLname.matches() & matcherStreet.matches());
-            }
         } catch (NullPointerException e) {
-            throw new CustomerException("NullPointerException !");
+            throw new CustomerException("Null Pointer Exception !");
         }
-        return true;
     }
 
     private boolean validateNumber(Customer customer) throws CustomerException {
@@ -146,30 +145,25 @@ public class CustomerImpl implements Serializable {
 
         pattern = Pattern.compile(NUMBER_PATTERN);
         try {
-            if(customer.getZipCode() != null) {
                 matcher = pattern.matcher(customer.getZipCode());
                 return matcher.matches();
-            }
-        } catch (NullPointerException e){
-            throw new CustomerException("NullPointerException !");
+        } catch (NullPointerException e) {
+            throw new CustomerException("Null Pointer Exception !");
         }
-        return true;
     }
 
     private boolean validateUsername(Customer customer) throws CustomerException {
         Pattern pattern;
         Matcher matcher;
-        boolean resultRegex = false;
+        boolean resultRegex;
         boolean resultUnique;
 
-        pattern = Pattern.compile(TEXT_PATTERN);
+        pattern = Pattern.compile(USERNAME_PATTERN);
         try {
-            if(customer.getFirstName() != null){
                 matcher=pattern.matcher(customer.getUsername());
                 resultRegex =  matcher.matches();
-            }
-        } catch (NullPointerException e){
-            throw new CustomerException("NullPointerException!");
+        } catch (NullPointerException e) {
+            throw new CustomerException("Null Pointer Exception !");
         }
         resultUnique = isUnique(customer.getUsername());
 
@@ -191,5 +185,12 @@ public class CustomerImpl implements Serializable {
 
     List<Customer> getCustomers() {
         return customerList;
+    }
+
+    public void logout() {
+        //FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+        //return "/home.xhtml?faces-redirect=true";
+        Map session = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+        session.put("customerBean", new CustomerImpl());
     }
 }

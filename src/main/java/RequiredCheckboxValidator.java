@@ -28,8 +28,8 @@ public class RequiredCheckboxValidator implements Validator {
                     requiredMessage = MessageFormat.format(UIInput.REQUIRED_MESSAGE_ID, label);
                 }
 
-                throw new ValidatorException(
-                        new FacesMessage(FacesMessage.SEVERITY_ERROR, requiredMessage, requiredMessage));
+                throw new ValidatorException (
+                        new FacesMessage(FacesMessage.SEVERITY_ERROR, requiredMessage, requiredMessage) );
             }
         }
     }

@@ -2,14 +2,12 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
-import java.io.Serializable;
 import java.util.List;
 
-@ManagedBean(name= "firstView", eager = true)
+@ManagedBean(name= "customerView")
 @ViewScoped
-public class PaginatorView implements Serializable {
+public class CustomerView {
 
-    private static final long serialVersionUID = -3148635078783043921L;
     private List<Customer> customers;
 
     @ManagedProperty("#{customerBean}")
@@ -32,10 +30,10 @@ public class PaginatorView implements Serializable {
         return service;
     }
 
-    public Long findMax(){
+    public Long findMax() {
         Long max = customers.get(0).getId();
-        for(Customer c:customers){
-            if(c.getId()>max){
+        for (Customer c : customers) {
+            if (c.getId() > max) {
                 max = c.getId();
             }
         }

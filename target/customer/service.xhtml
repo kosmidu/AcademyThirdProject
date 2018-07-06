@@ -16,155 +16,182 @@
     <ui:composition template="/WEB-INF/templates/common/commonLayout.xhtml">
         <!--override the content-->
         <ui:define name="content">
-            #{secondView.service.user.id}
-            #{secondView.setUserID(secondView.service.user.id)}
-            #{secondView.userID}
-
-            #{secondView.findCustomer()}
-            #{secondView.user.id}
         <!-- EDIT CUSTOMER -->
             <h:form id="edit_form">
 
                 <p:growl id="growl" sticky="true" showDetail="true" />
 
-                <p:wizard flowListener="#{secondView.onFlowProcess}">
+                <p:wizard style="width: 80%;font: 12px Sans-Serif;color: dimgray">
                     <p:tab id="personal" title="Personal">
                         <p:panel header="Personal Details">
-                            <p:messages />
-                            <h:panelGrid columns="2" columnClasses="label, value">
-                                <h:outputText value="Firstname: *" />
-                                <p:inputText id="fName" value="#{secondView.user.firstName}" required="true" label="Firstname"
-                                             placeholder="Enter your name">
-                                    <f:validateLength minimum="2" maximum="20" />
-                                    <f:validateRegex pattern="^[A-Za-z]+$" />
-
-                                </p:inputText>
-
-                                <h:outputText value="Lastname: *" />
-                                <p:inputText id="lName" value="#{secondView.user.lastName}" required="true" label="Lastname"
-                                             placeholder="Enter your surname" >
-                                    <f:validateLength minimum="2" maximum="20" />
+                            <h:panelGrid columns="3" columnClasses="label, value, error">
+                                <h:outputLabel value="First name: *" />
+                                <p:inputText id="fName" value="#{editView.user.firstName}" required="true" label="Firstname"
+                                             placeholder="Enter your name"
+                                             requiredMessage="Please type your first name" >
+                                    <f:validateLength minimum="2" maximum="30" />
                                     <f:validateRegex pattern="^[A-Za-z]+$" />
                                 </p:inputText>
+                                <p:message for="fName" display="" />
 
-                                <h:outputText value="Username: *" />
-                                <p:inputText id="username" value="#{secondView.user.username}" required="true" label="Username"
-                                             placeholder="Enter your username" requiredMessage="This username is exists already">
-                                    <f:validateLength minimum="2" maximum="20" />
+                                <h:outputLabel value="Last name: *" />
+                                <p:inputText id="lName" value="#{editView.user.lastName}" required="true" label="Lastname"
+                                             placeholder="Enter your surname"
+                                             requiredMessage="Please type your surname" >
+                                    <f:validateLength minimum="2" maximum="30" />
                                     <f:validateRegex pattern="^[A-Za-z]+$" />
-                                    <f:validator validatorId="UniqueUsernameValidator" />
-                                    <f:attribute name="employee" value="#{firstView.getCustomers()}" />
                                 </p:inputText>
+                                <p:message for="lName" display="" />
 
-                                <h:outputText value="Age: " />
-                                <p:calendar value="#{secondView.user.birthDate}" placeholder="dd-MM-yyyy"
-                                            pattern="dd-MM-yyyy" mask="true" />
+                                <h:outputLabel value="Username: *" />
+                                <p:inputText id="username" value="#{editView.user.username}" required="true" label="Username"
+                                             placeholder="Enter your username"
+                                             requiredMessage="Please type your username" >
+                                    <f:validateLength minimum="2" maximum="20" />
+                                    <f:validateRegex pattern="^[A-Za-z][A-Za-z0-9]+$" />
+                                    <c:choose>
+                                        <c:when test="#{!editView.existID}">
+                                            <f:validator validatorId="UniqueUsernameValidator" />
+                                            <f:attribute name="employee" value="#{customerView.getCustomers()}" />
+                                        </c:when>
+                                    </c:choose>
+                                </p:inputText>
+                                <p:message for="username" display="" />
 
-                                <h:outputText value="Skip to last: " />
-                                <p:selectBooleanCheckbox value="#{secondView.skip}" />
+                                <h:outputLabel value="Birth date: *" />
+                                <p:calendar id="date" value="#{editView.user.birthDate}" placeholder="dd-MM-yyyy"
+                                            pattern="dd-MM-yyyy" mask="true" required="true" label="Date of birth"
+                                            requiredMessage="Please enter your birth date" />
+                                <p:message for="date" display="" />
                             </h:panelGrid>
                         </p:panel>
                     </p:tab>
 
                     <p:tab id="address" title="Address">
                         <p:panel header="Address Details">
-                            <p:messages />
-                            <h:panelGrid columns="2" columnClasses="label, value">
-                                <h:outputText value="Country: " />
-                                <p:inputText value="#{secondView.user.country}" placeholder="Enter the country name"/>
+                            <h:panelGrid columns="3" columnClasses="label, value, error">
+                                <h:outputLabel value="Country: *" />
+                                <p:selectOneMenu id="country" value="#{editView.country}" required="true" label="Country"
+                                                 requiredMessage="Please type the country name">
+                                    <f:selectItem itemLabel="Select Country" itemValue="" noSelectionOption="true" />
+                                    <f:selectItems value="#{editView.countries}" />
+                                    <f:ajax execute="country" render="city" update="city" />
+                                </p:selectOneMenu>
+                                <p:message for="country" display="" />
 
-                                <h:outputText value="City: " />
-                                <p:inputText value="#{secondView.user.city}" placeholder="Enter the city name"/>
+                                <h:outputLabel value="City: *" />
+                                <p:selectOneMenu id="city" value="#{editView.city}" required="true" label="City"
+                                                 requiredMessage="Please type the city name">
+                                    <f:selectItem itemLabel="Select City" itemValue="" noSelectionOption="true" />
+                                    <f:selectItems value="#{editView.cities}" />
+                                </p:selectOneMenu>
+                                <p:message for="city" display="" />
 
-                                <h:outputText value="Street: " />
-                                <p:inputText value="#{secondView.user.street}" placeholder="Enter the street name" >
+                                <h:outputLabel value="Street: *" />
+                                <p:inputText id="street" value="#{editView.user.street}" placeholder="Enter the street name"
+                                             required="true" label="Street"
+                                             requiredMessage="Please type the street name">
                                     <f:validateLength minimum="2" maximum="20" />
                                     <f:validateRegex pattern="^[A-Za-z]+$" />
                                 </p:inputText>
+                                <p:message for="street" display="" />
 
-                                <h:outputText value="Postal Code: " />
-                                <p:inputText value="#{secondView.user.zipCode}" placeholder="Enter the zip code" >
+                                <h:outputLabel value="Postal Code: *" />
+                                <p:inputText id="zipCode" value="#{editView.user.zipCode}" placeholder="Enter the zip code"
+                                             required="true" label="Postal code"
+                                             requiredMessage="Please type the postal code">
                                     <f:validateLength minimum="2" maximum="20" />
                                     <f:validateRegex pattern="^[0-9]+$" />
                                 </p:inputText>
-
-                                <h:outputText value="Skip to last: " />
-                                <p:selectBooleanCheckbox value="#{secondView.skip}" />
+                                <p:message for="zipCode" display="" />
                             </h:panelGrid>
                         </p:panel>
                     </p:tab>
 
                     <p:tab id="contact" title="Contact">
                         <p:panel header="Contact Information">
-                            <p:messages />
-                            <h:panelGrid columns="2" columnClasses="label, value">
+                            <h:panelGrid columns="3" columnClasses="label, value, error">
                                 <h:outputText value="Email: *" />
-                                <p:inputText id="email" value="#{secondView.user.email}" required="true" label="Email"
+                                <p:inputText id="email" value="#{editView.user.email}" required="true" label="Email"
                                              placeholder="Enter your mail" size="40"
-                                             requiredMessage="Please enter your email address."
-                                             validatorMessage="Invalid email format">
+                                             requiredMessage="Please type your email address"
+                                             validatorMessage="Invalid email format" >
                                     <f:validateRegex
                                             pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
                                 </p:inputText>
+                                <p:message for="email" display="" />
 
-                                <h:outputText value="Phone: " />
-                                <p:inputMask id="phone" value="#{secondView.user.phone}" placeholder="Enter your phone"
-                                             mask="999-9999999"/>
+                                <h:outputText value="Phone: *" />
+                                <p:inputMask id="phone" value="#{editView.user.phone}" placeholder="Enter your phone"
+                                             mask="999-9999999" required="true" label="Phone"
+                                             requiredMessage="Please type your phone number"/>
+                                <p:message for="phone" display="" />
                             </h:panelGrid>
                         </p:panel>
                     </p:tab>
 
                     <p:tab id="confirm" title="Confirmation">
                         <p:panel header="Confirmation">
-                            <h:panelGrid id="confirmation" columns="3" columnClasses="alignTop,alignTop,alignTop" >
+                            <p:messages />
+                            <h:panelGrid id="confirmation" columns="1" columnClasses="alignTop" >
                                 <p:panelGrid columns="2" columnClasses="label, value" >
                                     <h:outputText value="Firstname: " styleClass="recordLabel" />
-                                    <h:outputText value="#{secondView.user.firstName}" styleClass="outputLabel"/>
+                                    <h:outputText value="#{editView.user.firstName}" styleClass="outputLabel"/>
 
                                     <h:outputText value="Lastname: " styleClass="recordLabel" />
-                                    <h:outputText value="#{secondView.user.lastName}" styleClass="outputLabel"/>
+                                    <h:outputText value="#{editView.user.lastName}" styleClass="outputLabel"/>
 
                                     <h:outputText value="Username: " styleClass="recordLabel" />
-                                    <h:outputText value="#{secondView.user.username}" styleClass="outputLabel"/>
+                                    <h:outputText value="#{editView.user.username}" styleClass="outputLabel"/>
 
                                     <h:outputText value="Age: " styleClass="recordLabel" />
-                                    <h:outputText value="#{secondView.user.birthDate}" styleClass="outputLabel">
+                                    <h:outputText value="#{editView.user.birthDate}" styleClass="outputLabel">
                                         <f:convertDateTime pattern="dd/MM/yyyy" />
                                     </h:outputText>
-                                </p:panelGrid>
 
-                                <p:panelGrid columns="2" columnClasses="label, value" >
                                     <h:outputText value="Country: " styleClass="recordLabel" />
-                                    <h:outputText value="#{secondView.user.country}" styleClass="outputLabel"/>
+                                    <h:outputText value="#{editView.country}" styleClass="outputLabel" />
 
                                     <h:outputText value="City: " styleClass="recordLabel" />
-                                    <h:outputText value="#{secondView.user.city}" styleClass="outputLabel"/>
+                                    <h:outputText value="#{editView.city}" styleClass="outputLabel" />
 
                                     <h:outputText value="Street: " styleClass="recordLabel" />
-                                    <h:outputText value="#{secondView.user.street}" styleClass="outputLabel"/>
+                                    <h:outputText value="#{editView.user.street}" styleClass="outputLabel" />
 
                                     <h:outputText value="Postal code: " styleClass="recordLabel" />
-                                    <h:outputText value="#{secondView.user.zipCode}" styleClass="outputLabel"/>
-                                </p:panelGrid>
+                                    <h:outputText value="#{editView.user.zipCode}" styleClass="outputLabel" />
 
-                                <p:panelGrid columns="2" columnClasses="label, value" >
                                     <h:outputText value="Email: " styleClass="recordLabel" />
-                                    <h:outputText value="#{secondView.user.email}" styleClass="outputLabel"/>
+                                    <h:outputText value="#{editView.user.email}" styleClass="outputLabel" />
 
                                     <h:outputText value="Phone " styleClass="recordLabel" />
-                                    <h:outputText value="#{secondView.user.phone}" styleClass="outputLabel"/>
+                                    <h:outputText value="#{editView.user.phone}" styleClass="outputLabel" />
                                 </p:panelGrid>
                             </h:panelGrid>
-
                             <br/>
+
+                            #{editView.user.setCountry(editView.country)}
+                            #{editView.user.setCity(editView.city)}
+
                             <h:form>
-                                <h:outputLabel for="agree" value="Accept Terms " />
-                                <p:selectBooleanCheckbox id="agree" value="#{secondView.user.acceptTerms}" requiredMessage="You must agree!">
-                                    <f:validator validatorId="RequiredCheckboxValidator" />
-                                </p:selectBooleanCheckbox>
+                                <h:outputLabel value="Accept Terms " />
+                                <c:choose>
+                                    <c:when test="#{editView.user.acceptTerms}">
+                                        <p:selectBooleanCheckbox id="agree_true" value="#{editView.user.acceptTerms}"
+                                                                 requiredMessage="You must agree!" disabled="true" >
+                                            <f:validator validatorId="RequiredCheckboxValidator" />
+                                        </p:selectBooleanCheckbox>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <p:selectBooleanCheckbox id="agree_false" value="#{editView.user.acceptTerms}"
+                                                                 requiredMessage="You must agree!" disabled="false" >
+                                            <f:validator validatorId="RequiredCheckboxValidator" />
+                                        </p:selectBooleanCheckbox>
+                                    </c:otherwise>
+                                </c:choose>
 
                                 <p:commandButton value="#{msg['submit_button']}" ajax="true" style="margin-left: 5%">
-                                    <f:ajax execute="@form" render="@form" listener="#{secondView.submit}"/>
+                                    <f:ajax execute="@form" render="@form" update="@form" listener="#{editView.submit}" />
                                 </p:commandButton>
                                 <p:messages infoStyle="color: green;" errorStyle="color: red;" />
                             </h:form>
@@ -172,52 +199,13 @@
 
                     </p:tab>
                 </p:wizard>
-                <br/><br/>
-                <p:commandButton value="Home" icon="ui-icon-home" onclick="window.history.back();"/>
+                <br/>
             </h:form>
 
+            <h:form>
+                <p:commandButton value="Home" icon="ui-icon-home" action="home?faces-redirect=true" ajax="false" />
+            </h:form>
         </ui:define>
     </ui:composition>
-
-    <script type="text/javascript">
-        /**
-         * Faces Validator
-         */
-        PrimeFaces.validator['custom.emailValidator'] = {
-
-            pattern: /\S+@\S+/,
-
-            validate: function(element, value) {
-                //use element.data() to access validation metadata, in this case there is none.
-                if(!this.pattern.test(value)) {
-                    throw {
-                        summary: 'Validation Error',
-                        detail: value + ' is not a valid email.'
-                    }
-                }
-            }
-        };
-
-        /**
-         * Bean validator
-         */
-        PrimeFaces.validator['Email'] = {
-
-            pattern: /\S+@\S+/,
-
-            MESSAGE_ID: 'org.primefaces.examples.validate.email.message',
-
-            validate: function(element, value) {
-                var vc = PrimeFaces.util.ValidationContext;
-
-                if(!this.pattern.test(value)) {
-                    var msgStr = element.data('p-email-msg'),
-                        msg = msgStr ? {summary:msgStr, detail: msgStr} : vc.getMessage(this.MESSAGE_ID);
-
-                    throw msg;
-                }
-            }
-        };
-    </script>
 </h:body>
 </html>

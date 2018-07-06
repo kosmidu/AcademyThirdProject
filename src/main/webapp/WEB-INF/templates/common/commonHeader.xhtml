@@ -7,27 +7,58 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
-<f:view locale="#{locale.locale}">
+<h:head>
+    <h:outputStylesheet name="common-style.css" library="css" />
+    <title>Customers</title>
+</h:head>
+
 <h:body>
+
     <ui:composition>
-
-        <h2>
-            <h:outputText value="Header" />
-        </h2>
-
         <h:form>
-            <p:growl id="growl" life="2000" />
-            <h:outputText value = "#{msg['local.jsf']}" />
-            <div id="flag-icons">
-                <h:commandButton actionListener="#{locale.changeLanguage('')}"
-                                 value="English" image="resources/img/icon/uk.png" update="growl"/>
-                <h:outputText value=" " />
-                <h:commandButton action="#{locale.changeLanguage('es')}"
-                                 value="Spanish" image="resources/img/icon/es.png" />
-            </div>
-        </h:form>
+        <p:growl id="growl" life="2000" />
 
+        <f:view locale="#{locale.locale}">
+        <p:toolbar>
+        <p:toolbarGroup styleClass="header_inside">
+            <p:panelGrid styleClass="ui-noborder" style="width: 100%">
+                <p:column style="text-align: left; width:50%">
+                    <h2>
+                        <h:outputText style="font: Sans-Serif" value = "#{msg['local']}" />
+                    </h2>
+                </p:column>
+                <p:column style="text-align: right; width:50%">
+                <p:panelGrid style="width: 100%">
+                    <p:column style="width: 88%" />
+                    <p:column style="width: 12%">
+                        <p:panel>
+                            <div id="flag-icons">
+                                <p:panelGrid>
+                                    <p:column>
+                                    <h:commandButton actionListener="#{locale.changeLanguage('')}"
+                                                 value="English" image="resources/img/icon/uk.png" update="growl"
+                                                 style="width: auto; height: 18px"/>
+                                    </p:column>
+                                    <p:column>
+                                    <h:commandButton action="#{locale.changeLanguage('es')}"
+                                                 value="Spanish" image="resources/img/icon/es.png"
+                                                 style="width: auto; height: 18px"/>
+                                    </p:column>
+
+                                </p:panelGrid>
+                            </div>
+                        </p:panel>
+                    </p:column>
+                </p:panelGrid>
+
+                </p:column>
+            </p:panelGrid>
+        </p:toolbarGroup>
+        </p:toolbar>
+        </f:view>
+        </h:form>
     </ui:composition>
+
 </h:body>
-</f:view>
+
 </html>
