@@ -2,48 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07b5846-1142-4562-9a93-936774ce5b44" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CustomerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CustomerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PaginatorView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProductDetailView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductDetailView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RequiredCheckboxValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RequiredCheckboxValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UniqueUsernameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UniqueUsernameValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/local_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local_es.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonLayout.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonLayout.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/service.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/service.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CustomerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CustomerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PaginatorView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ProductDetailView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProductDetailView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UniqueUsernameValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UniqueUsernameValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/local_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/local_es.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/customer-classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer-classes.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/customer.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/classes/CustomerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/classes/CustomerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/classes/PaginatorView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/classes/ProductDetailView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/classes/ProductDetailView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/classes/UniqueUsernameValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/classes/UniqueUsernameValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/classes/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/classes/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/classes/local_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/classes/local_es.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/templates/common/commonFooter.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/templates/common/commonFooter.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/templates/common/commonHeader.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/templates/common/commonHeader.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/templates/common/commonLayout.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/templates/common/commonLayout.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/customer/home.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/home.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/customer/resources/css/common-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/resources/css/common-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/customer/service.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/service.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,26 +47,8 @@
       <file leaf-file-name="commonLayout.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonLayout.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
+            <state relative-caret-position="467">
               <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commonFooter.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common-style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -100,8 +56,8 @@
       <file leaf-file-name="commonHeader.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="22" column="50" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="50" />
+            <state relative-caret-position="360">
+              <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -118,7 +74,7 @@
       <file leaf-file-name="CustomerView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CustomerView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
+            <state relative-caret-position="287">
               <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -130,6 +86,28 @@
                 <element signature="e#625#626#0" expanded="true" />
                 <element signature="e#665#666#0" expanded="true" />
                 <element signature="e#695#696#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDetailView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ProductDetailView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CustomerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
+              <folding>
+                <element signature="e#7139#7140#0" expanded="true" />
+                <element signature="e#7174#7175#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,20 +132,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="service.xhtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="service.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/service.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="359">
+              <caret line="187" column="118" selection-start-line="187" selection-start-column="117" selection-end-line="187" selection-end-column="118" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.xhtml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/home.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="341">
+              <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -224,20 +202,20 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/PaginatorView.java" />
         <option value="$PROJECT_DIR$/src/main/java/CustomerView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CustomerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/RequiredCheckboxValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/UniqueUsernameValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ProductDetailView.java" />
         <option value="$PROJECT_DIR$/src/main/resources/local_es.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/local.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonLayout.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/home.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/CustomerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ProductDetailView.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/service.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/home.xhtml" />
       </list>
     </option>
   </component>
@@ -257,7 +235,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="927" />
@@ -269,8 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -296,76 +272,20 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="AcademyThirdProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademyThirdProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademyThirdProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademyThirdProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademyThirdProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademyThirdProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademyThirdProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademyThirdProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademyThirdProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademyThirdProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademyThirdProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademyThirdProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademyThirdProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademyThirdProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AcademySecondProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -523,11 +443,14 @@
       <workItem from="1530865734255" duration="3426000" />
       <workItem from="1530869245071" duration="17805000" />
       <workItem from="1530894011560" duration="3620000" />
+      <workItem from="1530971659662" duration="8197000" />
+      <workItem from="1530981221222" duration="127000" />
+      <workItem from="1531036094066" duration="8418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288474000" />
+    <option name="totallyTimeSpent" value="305216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -545,16 +468,16 @@
       <window_info anchor="right" id="JSF" order="6" weight="0.3291714" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24958494" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.35083798" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.652514" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49973017" visible="true" weight="0.37430167" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32960895" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.30533484" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13779746" />
       <window_info anchor="right" id="Bean Validation" order="11" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="Learn" order="6" weight="0.32982844" />
@@ -568,6 +491,42 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24986508" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32960895" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="Image Layers" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49973017" visible="true" weight="0.37430167" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24958494" />
+      <window_info anchor="right" id="JSF" order="6" weight="0.3291714" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32960895" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50026983" side_tool="true" weight="0.32934782" />
+      <window_info anchor="bottom" id="Messages" order="0" visible="true" weight="0.05586592" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24986508" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.30533484" />
+      <window_info id="Learn" order="6" weight="0.32982844" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32982844" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="CDI" order="10" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32960895" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.35083798" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -577,7 +536,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="46" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/CustomerImpl.java</url>
+          <line>174</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="50" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -751,12 +718,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/sun/faces/jsf-api/2.2.15/jsf-api-2.2.15.jar!/javax/faces/Messages.properties">
       <provider editor-type-id="ResourceBundle" />
@@ -777,13 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProductDetailView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="179" column="37" selection-start-line="179" selection-start-column="37" selection-end-line="179" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -823,10 +783,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CustomerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="90">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonLayout.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LanguageSwitcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -838,16 +819,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LanguageSwitcher.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        <state relative-caret-position="360">
+          <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonContent.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CustomerView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
+        <state relative-caret-position="287">
           <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -863,52 +851,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CustomerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="50" />
+        <state relative-caret-position="84">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#7139#7140#0" expanded="true" />
+            <element signature="e#7174#7175#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/home.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ProductDetailView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonContent.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonLayout.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state relative-caret-position="336">
+          <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/service.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        <state relative-caret-position="359">
+          <caret line="187" column="118" selection-start-line="187" selection-start-column="117" selection-end-line="187" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/home.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
         </state>
       </provider>
     </entry>

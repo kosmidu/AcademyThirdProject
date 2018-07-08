@@ -149,7 +149,7 @@ public class ProductDetailView {
                     service.updateCustomer(user);
                     FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Successful update!", "Hello, " + user.getFirstName());
                     PrimeFaces.current().dialog().showMessageDynamic(msg);
-                    break;
+                    return;
                 }
                 FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Unsuccessful update!", "Invalid data.");
                 PrimeFaces.current().dialog().showMessageDynamic(msg);

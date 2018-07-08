@@ -19,9 +19,9 @@
         <!-- EDIT CUSTOMER -->
             <h:form id="edit_form">
 
-                <p:growl id="growl" sticky="true" showDetail="true" />
+                <!--<p:growl id="growl" sticky="true" showDetail="true" />-->
 
-                <p:wizard style="width: 80%;font: 12px Sans-Serif;color: dimgray">
+                <p:wizard>
                     <p:tab id="personal" title="Personal">
                         <p:panel header="Personal Details">
                             <h:panelGrid columns="3" columnClasses="label, value, error">
@@ -132,9 +132,8 @@
 
                     <p:tab id="confirm" title="Confirmation">
                         <p:panel header="Confirmation">
-                            <p:messages />
-                            <h:panelGrid id="confirmation" columns="1" columnClasses="alignTop" >
-                                <p:panelGrid columns="2" columnClasses="label, value" >
+                            <h:panelGrid id="confirmation" columns="1" columnClasses="alignTop" style="width: 100%">
+                                <p:panelGrid columns="2" columnClasses="label, value">
                                     <h:outputText value="Firstname: " styleClass="recordLabel" />
                                     <h:outputText value="#{editView.user.firstName}" styleClass="outputLabel"/>
 
@@ -172,38 +171,38 @@
 
                             #{editView.user.setCountry(editView.country)}
                             #{editView.user.setCity(editView.city)}
+                            <p:panelGrid style="width: 100%;" styleClass="ui-noborder" >
 
-                            <h:form>
-                                <h:outputLabel value="Accept Terms " />
-                                <c:choose>
-                                    <c:when test="#{editView.user.acceptTerms}">
-                                        <p:selectBooleanCheckbox id="agree_true" value="#{editView.user.acceptTerms}"
-                                                                 requiredMessage="You must agree!" disabled="true" >
-                                            <f:validator validatorId="RequiredCheckboxValidator" />
-                                        </p:selectBooleanCheckbox>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <p:selectBooleanCheckbox id="agree_false" value="#{editView.user.acceptTerms}"
-                                                                 requiredMessage="You must agree!" disabled="false" >
-                                            <f:validator validatorId="RequiredCheckboxValidator" />
-                                        </p:selectBooleanCheckbox>
-                                    </c:otherwise>
-                                </c:choose>
+                                <h:form>
+                                    <p:column style="width: 50%">
+                                        <h:outputLabel value="Accept Terms " />
+                                        <c:choose>
+                                            <c:when test="#{editView.user.acceptTerms}">
+                                                <p:selectBooleanCheckbox id="agree_true" value="#{editView.user.acceptTerms}"
+                                                                         requiredMessage="You must agree!" disabled="true" >
+                                                    <f:validator validatorId="RequiredCheckboxValidator" />
+                                                </p:selectBooleanCheckbox>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <p:selectBooleanCheckbox id="agree_false" value="#{editView.user.acceptTerms}"
+                                                                         requiredMessage="You must agree!" disabled="false" >
+                                                    <f:validator validatorId="RequiredCheckboxValidator" />
+                                                </p:selectBooleanCheckbox>
+                                                <p:messages infoStyle="color: green;" errorStyle="color: red;" style="width: 35%" />
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </p:column>
+                                    <p:column style="width: 50%;text-align: right;padding-right: 15px">
+                                        <p:commandButton value="#{msg['submit_button']}" ajax="true" >
+                                            <f:ajax execute="@form" render="@form" update="@form" listener="#{editView.submit}" />
+                                        </p:commandButton>
+                                    </p:column>
+                                </h:form>
 
-                                <p:commandButton value="#{msg['submit_button']}" ajax="true" style="margin-left: 5%">
-                                    <f:ajax execute="@form" render="@form" update="@form" listener="#{editView.submit}" />
-                                </p:commandButton>
-                                <p:messages infoStyle="color: green;" errorStyle="color: red;" />
-                            </h:form>
+                            </p:panelGrid>
                         </p:panel>
-
                     </p:tab>
                 </p:wizard>
-                <br/>
-            </h:form>
-
-            <h:form>
-                <p:commandButton value="Home" icon="ui-icon-home" action="home?faces-redirect=true" ajax="false" />
             </h:form>
         </ui:define>
     </ui:composition>

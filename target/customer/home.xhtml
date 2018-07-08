@@ -16,10 +16,10 @@
 
     <ui:composition template="/WEB-INF/templates/common/commonLayout.xhtml">
         <ui:define name="content">
-            <p:toolbar>
+            <p:toolbar >
                 <p:toolbarGroup>
                     <h2>
-                        <p:outputLabel value="Customer's Information" />
+                        <p:outputLabel value="Customer's Information" style="font-family: 'Helvetica'; color: dimgray" />
                     </h2>
         <!-- CREATE CUSTOMER -->
             <h:form id="create_form" >
@@ -37,18 +37,19 @@
                              rowIndexVar="row"
                              paginator="true"
                              paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
-                             rowsPerPageTemplate="5,10,15">
+                             rowsPerPageTemplate="5,10,15"
+                             style="width: 100%">
 
                 <!-- USERNAME -->
-                    <p:column headerText="Username" filterBy="#{customer.username}" sortBy="#{customer.username}" filterMatchMode="contains">
+                    <p:column headerText="Username" filterBy="#{customer.username}" sortBy="#{customer.username}" filterMatchMode="contains" style="width: 25%">
                         <h:outputText value="#{customer.username}" />
                     </p:column>
                 <!-- FIRST NAME -->
-                    <p:column headerText="FirstName" filterBy="#{customer.firstName}" sortBy="#{customer.firstName}" filterMatchMode="contains">
+                    <p:column headerText="FirstName" filterBy="#{customer.firstName}" sortBy="#{customer.firstName}" filterMatchMode="contains" style="width: 25%">
                         <h:outputText value="#{customer.firstName}" />
                     </p:column>
                 <!-- LAST NAME -->
-                    <p:column headerText="LastName" filterBy="#{customer.lastName}" sortBy="#{customer.lastName}" filterMatchMode="contains">
+                    <p:column headerText="LastName" filterBy="#{customer.lastName}" sortBy="#{customer.lastName}" filterMatchMode="contains" style="width: 25%">
                         <h:outputText value="#{customer.lastName}" />
                     </p:column>
                 <!-- MODIFY -->
@@ -74,14 +75,9 @@
                             </p:confirmDialog>
                     </p:column>
                 </p:dataTable>
-                <br/><br/>
-                <p:commandButton value="Home" icon="ui-icon-home" ajax="true">
-                    <f:ajax update=":view_form" render=":view_form"/>
-                </p:commandButton>
             </h:form>
                     </p:toolbarGroup>
                 </p:toolbar>
-        <!--</p:panel>-->
 
 
         </ui:define>

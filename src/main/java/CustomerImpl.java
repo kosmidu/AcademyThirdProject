@@ -165,14 +165,17 @@ public class CustomerImpl implements Serializable {
         } catch (NullPointerException e) {
             throw new CustomerException("Null Pointer Exception !");
         }
-        resultUnique = isUnique(customer.getUsername());
+        resultUnique = isUnique(customer);
 
         return resultRegex & resultUnique;
     }
 
-    private boolean isUnique(String username) {
+    private boolean isUnique(Customer customer) {
         for(Customer c: customerList) {
-            if(c.getUsername().equals(username)) {
+            if(c.getId().equals(customer.getId()) & c.getUsername().equals(customer.getUsername()))
+                return true;
+
+            if (c.getUsername().equals(customer.getUsername())) {
                 FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,
                         "This username is exists already!",
                         "Try another username, please.");
