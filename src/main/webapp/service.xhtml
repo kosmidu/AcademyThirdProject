@@ -21,7 +21,7 @@
 
                 <!--<p:growl id="growl" sticky="true" showDetail="true" />-->
 
-                <p:wizard>
+                <p:wizard nextLabel="#{msg['next_button']}" backLabel="#{msg['back_button']}">
                     <p:tab id="personal" title="#{msg['personal_tab']}">
                         <p:panel header="#{msg['widget_title']}">
                             <h:panelGrid columns="3" columnClasses="label, value, error">
