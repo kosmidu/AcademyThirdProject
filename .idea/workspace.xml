@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c07b5846-1142-4562-9a93-936774ce5b44" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CustomerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CustomerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProductDetailView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductDetailView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local_es.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/service.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/service.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CustomerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CustomerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer-classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer-classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/classes/CustomerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/classes/CustomerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/WEB-INF/templates/common/commonHeader.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/WEB-INF/templates/common/commonHeader.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/home.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/home.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/resources/css/common-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/resources/css/common-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/customer/service.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/customer/service.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,33 +34,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="commonLayout.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonLayout.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commonHeader.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LanguageSwitcher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/LanguageSwitcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CustomerView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CustomerView.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -100,6 +63,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="commonHeader.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="30" column="123" selection-start-line="30" selection-start-column="102" selection-end-line="30" selection-end-column="126" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CustomerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CustomerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,21 +85,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commonContent.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonContent.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/local.properties">
           <provider editor-type-id="ResourceBundle" />
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="34" selection-start-column="34" selection-end-column="34" />
+            <state relative-caret-position="198">
+              <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -135,17 +98,27 @@
       <file leaf-file-name="service.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/service.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="187" column="118" selection-start-line="187" selection-start-column="117" selection-end-line="187" selection-end-column="118" />
+            <state relative-caret-position="-162">
+              <caret line="177" column="80" selection-start-line="177" selection-start-column="80" selection-end-line="177" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.xhtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/home.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+            <state relative-caret-position="89">
+              <caret line="51" column="58" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="local_es.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/local_es.properties">
+          <provider editor-type-id="ResourceBundle" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -204,18 +177,18 @@
         <option value="$PROJECT_DIR$/src/main/java/CustomerView.java" />
         <option value="$PROJECT_DIR$/src/main/java/RequiredCheckboxValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/UniqueUsernameValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/local_es.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/local.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonLayout.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" />
         <option value="$PROJECT_DIR$/src/main/java/CustomerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ProductDetailView.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/service.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/home.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/service.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/resources/local.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/local_es.properties" />
       </list>
     </option>
   </component>
@@ -235,8 +208,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="993" />
     <option name="y" value="25" />
     <option name="width" value="927" />
     <option name="height" value="1055" />
@@ -271,6 +244,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AcademyThirdProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademyThirdProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -445,15 +425,15 @@
       <workItem from="1530894011560" duration="3620000" />
       <workItem from="1530971659662" duration="8197000" />
       <workItem from="1530981221222" duration="127000" />
-      <workItem from="1531036094066" duration="8418000" />
+      <workItem from="1531036094066" duration="10706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305216000" />
+    <option name="totallyTimeSpent" value="307504000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="993" y="25" width="927" height="1055" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -477,7 +457,7 @@
       <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49973017" visible="true" weight="0.37430167" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32960895" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13779746" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28263336" />
       <window_info anchor="right" id="Bean Validation" order="11" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="Learn" order="6" weight="0.32982844" />
@@ -754,14 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/local_es.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -790,16 +762,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ProductDetailView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        <state relative-caret-position="336">
+          <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonContent.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CustomerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#7139#7140#0" expanded="true" />
+            <element signature="e#7174#7175#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonLayout.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
+        <state relative-caret-position="359">
           <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
         </state>
       </provider>
@@ -811,25 +801,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/local.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonHeader.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        <state relative-caret-position="330">
+          <caret line="30" column="123" selection-start-line="30" selection-start-column="102" selection-end-line="30" selection-end-column="126" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonContent.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/common/commonFooter.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        <state relative-caret-position="90">
+          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -851,35 +833,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CustomerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/home.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <element signature="e#7139#7140#0" expanded="true" />
-            <element signature="e#7174#7175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProductDetailView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+        <state relative-caret-position="89">
+          <caret line="51" column="58" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/service.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="187" column="118" selection-start-line="187" selection-start-column="117" selection-end-line="187" selection-end-column="118" />
+        <state relative-caret-position="-162">
+          <caret line="177" column="80" selection-start-line="177" selection-start-column="80" selection-end-line="177" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/home.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/local.properties">
+      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+        <state relative-caret-position="198">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/local_es.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
         </state>
       </provider>
     </entry>
