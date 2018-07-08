@@ -27,8 +27,8 @@
                             <h:panelGrid columns="3" columnClasses="label, value, error">
                                 <h:outputLabel value="#{msg['fname']} *" />
                                 <p:inputText id="fName" value="#{editView.user.firstName}" required="true" label="Firstname"
-                                             placeholder="Enter your name"
-                                             requiredMessage="Please type your first name" >
+                                             placeholder="#{msg['fname_placeHolder']}"
+                                             requiredMessage="#{msg['fname_error']}" >
                                     <f:validateLength minimum="2" maximum="30" />
                                     <f:validateRegex pattern="^[A-Za-z]+$" />
                                 </p:inputText>
@@ -36,8 +36,8 @@
 
                                 <h:outputLabel value="#{msg['lname']} *" />
                                 <p:inputText id="lName" value="#{editView.user.lastName}" required="true" label="Lastname"
-                                             placeholder="Enter your surname"
-                                             requiredMessage="Please type your surname" >
+                                             placeholder="#{msg['lname_placeHolder']}"
+                                             requiredMessage="#{msg['lname_error']}" >
                                     <f:validateLength minimum="2" maximum="30" />
                                     <f:validateRegex pattern="^[A-Za-z]+$" />
                                 </p:inputText>
@@ -45,8 +45,8 @@
 
                                 <h:outputLabel value="#{msg['username']} *" />
                                 <p:inputText id="username" value="#{editView.user.username}" required="true" label="Username"
-                                             placeholder="Enter your username"
-                                             requiredMessage="Please type your username" >
+                                             placeholder="#{msg['username_placeHolder']}"
+                                             requiredMessage="#{msg['username_error']}" >
                                     <f:validateLength minimum="2" maximum="20" />
                                     <f:validateRegex pattern="^[A-Za-z][A-Za-z0-9]+$" />
                                     <c:choose>
@@ -59,9 +59,9 @@
                                 <p:message for="username" display="" />
 
                                 <h:outputLabel value="#{msg['birth']} *" />
-                                <p:calendar id="date" value="#{editView.user.birthDate}" placeholder="dd-MM-yyyy"
+                                <p:calendar id="date" value="#{editView.user.birthDate}" placeholder="#{msg['birth_date_placeHolder']}"
                                             pattern="dd-MM-yyyy" mask="true" required="true" label="Date of birth"
-                                            requiredMessage="Please enter your birth date" />
+                                            requiredMessage="#{msg['age_error']}" />
                                 <p:message for="date" display="" />
                             </h:panelGrid>
                         </p:panel>
@@ -72,8 +72,8 @@
                             <h:panelGrid columns="3" columnClasses="label, value, error">
                                 <h:outputLabel value="#{msg['country']} *" />
                                 <p:selectOneMenu id="country" value="#{editView.country}" required="true" label="Country"
-                                                 requiredMessage="Please type the country name">
-                                    <f:selectItem itemLabel="Select Country" itemValue="" noSelectionOption="true" />
+                                                 requiredMessage="#{msg['country_error']}">
+                                    <f:selectItem itemLabel="#{msg['selectCountry']}" itemValue="" noSelectionOption="true" />
                                     <f:selectItems value="#{editView.countries}" />
                                     <f:ajax execute="country" render="city" update="city" />
                                 </p:selectOneMenu>
@@ -81,25 +81,25 @@
 
                                 <h:outputLabel value="#{msg['city']} *" />
                                 <p:selectOneMenu id="city" value="#{editView.city}" required="true" label="City"
-                                                 requiredMessage="Please type the city name">
-                                    <f:selectItem itemLabel="Select City" itemValue="" noSelectionOption="true" />
+                                                 requiredMessage="#{msg['city_error']}">
+                                    <f:selectItem itemLabel="#{msg['selectCity']}" itemValue="" noSelectionOption="true" />
                                     <f:selectItems value="#{editView.cities}" />
                                 </p:selectOneMenu>
                                 <p:message for="city" display="" />
 
                                 <h:outputLabel value="#{msg['street']} *" />
-                                <p:inputText id="street" value="#{editView.user.street}" placeholder="Enter the street name"
+                                <p:inputText id="street" value="#{editView.user.street}" placeholder="#{msg['street_placeHolder']}"
                                              required="true" label="Street"
-                                             requiredMessage="Please type the street name">
+                                             requiredMessage="#{msg['street_error']}">
                                     <f:validateLength minimum="2" maximum="20" />
                                     <f:validateRegex pattern="^[A-Za-z]+$" />
                                 </p:inputText>
                                 <p:message for="street" display="" />
 
                                 <h:outputLabel value="#{msg['postal_code']} *" />
-                                <p:inputText id="zipCode" value="#{editView.user.zipCode}" placeholder="Enter the zip code"
+                                <p:inputText id="zipCode" value="#{editView.user.zipCode}" placeholder="#{msg['postal_code_placeHolder']}"
                                              required="true" label="Postal code"
-                                             requiredMessage="Please type the postal code">
+                                             requiredMessage="#{msg['postal_code_error']}">
                                     <f:validateLength minimum="2" maximum="20" />
                                     <f:validateRegex pattern="^[0-9]+$" />
                                 </p:inputText>
@@ -113,18 +113,18 @@
                             <h:panelGrid columns="3" columnClasses="label, value, error">
                                 <h:outputText value="#{msg['email']} *" />
                                 <p:inputText id="email" value="#{editView.user.email}" required="true" label="Email"
-                                             placeholder="Enter your mail" size="40"
-                                             requiredMessage="Please type your email address"
-                                             validatorMessage="Invalid email format" >
+                                             placeholder="#{msg['email_placeHolder']}" size="40"
+                                             requiredMessage="#{msg['email_error1']}"
+                                             validatorMessage="#{msg['email_error2']}" >
                                     <f:validateRegex
                                             pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
                                 </p:inputText>
                                 <p:message for="email" display="" />
 
                                 <h:outputText value="#{msg['phone']} *" />
-                                <p:inputMask id="phone" value="#{editView.user.phone}" placeholder="Enter your phone"
+                                <p:inputMask id="phone" value="#{editView.user.phone}" placeholder="#{msg['phone_placeHolder']}"
                                              mask="999-9999999" required="true" label="Phone"
-                                             requiredMessage="Please type your phone number"/>
+                                             requiredMessage="#{msg['phone_error']}"/>
                                 <p:message for="phone" display="" />
                             </h:panelGrid>
                         </p:panel>
@@ -179,13 +179,13 @@
                                         <c:choose>
                                             <c:when test="#{editView.user.acceptTerms}">
                                                 <p:selectBooleanCheckbox id="agree_true" value="#{editView.user.acceptTerms}"
-                                                                         requiredMessage="You must agree!" disabled="true" >
+                                                                         requiredMessage="#{msg['accept_terms_error']}" disabled="true" >
                                                     <f:validator validatorId="RequiredCheckboxValidator" />
                                                 </p:selectBooleanCheckbox>
                                             </c:when>
                                             <c:otherwise>
                                                 <p:selectBooleanCheckbox id="agree_false" value="#{editView.user.acceptTerms}"
-                                                                         requiredMessage="You must agree!" disabled="false" >
+                                                                         requiredMessage="#{msg['accept_terms_error']}" disabled="false" >
                                                     <f:validator validatorId="RequiredCheckboxValidator" />
                                                 </p:selectBooleanCheckbox>
                                                 <p:messages infoStyle="color: green;" errorStyle="color: red;" style="width: 35%" />
