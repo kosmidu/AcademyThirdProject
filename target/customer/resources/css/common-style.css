@@ -1,18 +1,18 @@
 html {
     height: 100%;
-    font-family: "Helvetica";
+    font-family: "Helvetica", "serif";
 }
 
 .page {
     display: flex;
     flex-direction: column;
     height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
-    font-size:  13px;
+    font-size: 13px;
     margin: 0 auto;
     overflow: hidden;
     min-height: 100vh;
     color: dimgray;
-    font-family: "Helvetica";
+    font-family: "Helvetica", "serif";
 }
 
 .page-content {
@@ -30,36 +30,38 @@ html {
 }
 
 #footer {
-    width:100%;
+    width: 100%;
     text-align: center;
     flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
     color: gray;
 }
 
 #flag-icons {
-    text-align:center;
-    width:100%;
+    text-align: center;
+    width: 100%;
 }
 
-#container_modify, #container_delete{
-    display: flex;           /* establish flex container */
-    flex-direction: column;  /* make main axis vertical */
+#container_modify, #container_delete {
+    display: flex; /* establish flex container */
+    flex-direction: column; /* make main axis vertical */
     justify-content: center; /* center items vertically, in this case */
-    align-items: center;     /* center items horizontally, in this case */
+    align-items: center; /* center items horizontally, in this case */
 }
-#container_sno{
-    display: flex;           /* establish flex container */
-    flex-direction: column;  /* make main axis vertical */
+
+#container_sno {
+    display: flex; /* establish flex container */
+    flex-direction: column; /* make main axis vertical */
     justify-content: center; /* center items vertically, in this case */
-    align-items: center;     /* center items horizontally, in this case */
+    align-items: center; /* center items horizontally, in this case */
 }
+
 .centeredColumn {
     margin: 5px;
-    text-align: center;     /* will center text in <p>, which is not a flex item */
+    text-align: center; /* will center text in <p>, which is not a flex item */
 }
 
 .recordLabel {
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .alignTop {
@@ -68,22 +70,27 @@ html {
 
 .header_inside {
     width: 100%;
-    color:dimgray;
-    font-family: "Helvetica";
+    color: dimgray;
+    font-family: "Helvetica", "serif";
 }
-.ui-widget-content{
+
+.ui-widget-content {
     font: 14px "Helvetica";
 }
-.ui-wizard-step-titles.ui-helper-reset.ui-helper-clearfix{
+
+.ui-wizard-step-titles.ui-helper-reset.ui-helper-clearfix {
     font: 14px "Helvetica";
     color: gray;
 }
-.ui-wizard-navbar.ui-helper-clearfix{
+
+.ui-wizard-navbar.ui-helper-clearfix {
     width: 100%;
 }
-.ui-panel-content.ui-widget-content{
+
+.ui-panel-content.ui-widget-content {
     width: 100%;
 }
-.ui-wizard-step-title.ui-state-default.ui-corner-all.ui-state-highlight{
-    color:snow;
+
+.ui-wizard-step-title.ui-state-default.ui-corner-all.ui-state-highlight {
+    color: snow;
 }

@@ -9,74 +9,84 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xml:lang="en" lang="en">
 <h:head>
-    <h:outputStylesheet name="common-style.css" library="css" />
+    <h:outputStylesheet name="common-style.css" library="css"/>
     <title>Customers</title>
 </h:head>
 <h:body>
 
     <ui:composition template="/WEB-INF/templates/common/commonLayout.xhtml">
         <ui:define name="content">
-            <p:toolbar >
-            <p:toolbarGroup>
+            <p:toolbar>
+                <p:toolbarGroup>
                     <h2>
-                        <p:outputLabel value="#{msg['customer_title']}" style="font-family: 'Helvetica'; color: dimgray" />
+                        <p:outputLabel value="#{msg['customer_title']}"
+                                       style="font-family: 'Helvetica','serif'; color: dimgray"/>
                     </h2>
-        <!-- CREATE CUSTOMER -->
-            <h:form id="create_form" >
-                <p:commandButton value="#{msg['add_button']}" action="service.xhtml?faces-redirect=true"
-                                 icon="ui-icon-plusthick" styleClass="ui-priority-primary" ajax="false">
-                    <f:setPropertyActionListener target="#{customerView.service.user.id}" value= "#{customerView.findMax() + 1}"  />
-                </p:commandButton>
-                <br/>
-                <br/>
-            </h:form>
-        <!-- VIEW CUSTOMERS -->
-            <h:form id="view_form">
-                <p:dataTable id="table" value="#{customerView.customers}" var="customer"
-                             rows="5"
-                             rowIndexVar="row"
-                             paginator="true"
-                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
-                             rowsPerPageTemplate="5,10,15"
-                             style="width: 100%">
-
-                <!-- USERNAME -->
-                    <p:column headerText="#{msg['username_col']}" filterBy="#{customer.username}" sortBy="#{customer.username}" filterMatchMode="contains" style="width: 25%">
-                        <h:outputText value="#{customer.username}" />
-                    </p:column>
-                <!-- FIRST NAME -->
-                    <p:column headerText="#{msg['fname_col']}" filterBy="#{customer.firstName}" sortBy="#{customer.firstName}" filterMatchMode="contains" style="width: 25%">
-                        <h:outputText value="#{customer.firstName}" />
-                    </p:column>
-                <!-- LAST NAME -->
-                    <p:column headerText="#{msg['lname_col']}" filterBy="#{customer.lastName}" sortBy="#{customer.lastName}" filterMatchMode="contains" style="width: 25%">
-                        <h:outputText value="#{customer.lastName}" />
-                    </p:column>
-                <!-- MODIFY -->
-                    <p:column>
-                        <div id="container_modify" >
-                            <p:commandButton styleClass="centeredColumn" value="#{msg['modify_button']}" icon="ui-icon-pencil"
-                                             action="service?faces-redirect=true" ajax="false">
-                                <f:setPropertyActionListener target="#{customerView.service.user.id}" value="#{customer.id}"/>
-                            </p:commandButton>
-                        </div>
-                    </p:column>
-                <!-- DELETE -->
-                    <p:column>
-                            <div id="container_delete">
-                                <p:commandButton styleClass="centeredColumn" value="#{msg['delete_button']}" icon="ui-icon-trash">
-                                    <p:ajax update="view_form:table" listener="#{customerView.service.deleteCustomer(customer)}" />
-                                    <p:confirm header="Confirmation" message="Are you sure?" icon="ui-icon-alert" />
-                                </p:commandButton>
-                            </div>
-                            <p:confirmDialog global="true" showEffect="fade" hideEffect="fade" resizable="true">
-                                <p:commandButton value="Yes"  styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
-                                <p:commandButton value="No"  styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
-                            </p:confirmDialog>
-                    </p:column>
-                </p:dataTable>
-            </h:form>
-            </p:toolbarGroup>
+                    <!-- CREATE CUSTOMER -->
+                    <h:form id="create_form">
+                        <p:button value="#{msg['add_button']}" outcome="edit"
+                                  icon="ui-icon-plusthick" styleClass="ui-priority-primary" ajax="false">
+                            <f:param name="userId" value="#{customerBean.findMax() + 1}"/>
+                        </p:button>
+                        <br/>
+                        <br/>
+                    </h:form>
+                    <!-- VIEW CUSTOMERS -->
+                    <h:form id="view_form">
+                        <p:dataTable id="table" value="#{customerBean.customers}" var="customer"
+                                     rows="5"
+                                     rowIndexVar="row"
+                                     paginator="true"
+                                     paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                     rowsPerPageTemplate="5,10,15"
+                                     style="width: 100%">
+                            <!-- USERNAME -->
+                            <p:column headerText="#{msg['username_col']}" filterBy="#{customer.username}"
+                                      sortBy="#{customer.username}" filterMatchMode="contains" style="width: 25%">
+                                <h:outputText value="#{customer.username}"/>
+                            </p:column>
+                            <!-- FIRST NAME -->
+                            <p:column headerText="#{msg['fname_col']}" filterBy="#{customer.firstName}"
+                                      sortBy="#{customer.firstName}" filterMatchMode="contains" style="width: 25%">
+                                <h:outputText value="#{customer.firstName}"/>
+                            </p:column>
+                            <!-- LAST NAME -->
+                            <p:column headerText="#{msg['lname_col']}" filterBy="#{customer.lastName}"
+                                      sortBy="#{customer.lastName}" filterMatchMode="contains" style="width: 25%">
+                                <h:outputText value="#{customer.lastName}"/>
+                            </p:column>
+                            <!-- MODIFY -->
+                            <p:column>
+                                <div id="container_modify">
+                                    <p:button styleClass="centeredColumn" value="#{msg['modify_button']}"
+                                              icon="ui-icon-pencil"
+                                              outcome="edit">
+                                        <f:param name="userId" value="#{customer.id}"/>
+                                        ${customerBean.saveUserID(customer.id)}
+                                        ${customerBean.saveUser()}
+                                        ${customerBean.user}
+                                    </p:button>
+                                </div>
+                            </p:column>
+                            <!-- DELETE -->
+                            <p:column>
+                                <div id="container_delete">
+                                    <p:commandButton styleClass="centeredColumn" value="#{msg['delete_button']}"
+                                                     icon="ui-icon-trash">
+                                        <p:ajax update="view_form:table"
+                                                listener="#{customerBean.deleteCustomer(customer)}"/>
+                                        <p:confirm header="Confirmation" message="Are you sure?" icon="ui-icon-alert"/>
+                                    </p:commandButton>
+                                </div>
+                                <p:confirmDialog global="true" showEffect="fade" hideEffect="fade" resizable="true">
+                                    <p:commandButton value="Yes" styleClass="ui-confirmdialog-yes"
+                                                     icon="ui-icon-check"/>
+                                    <p:commandButton value="No" styleClass="ui-confirmdialog-no" icon="ui-icon-close"/>
+                                </p:confirmDialog>
+                            </p:column>
+                        </p:dataTable>
+                    </h:form>
+                </p:toolbarGroup>
             </p:toolbar>
 
 
